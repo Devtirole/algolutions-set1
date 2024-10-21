@@ -1,0 +1,17 @@
+def unique_numbers(array):
+    unique_numbers = set()
+    duplicates = set()
+    
+    for num in array:
+        if num in unique_numbers:
+            duplicates.add(num)
+        else:
+            unique_numbers.add(num)
+    
+    unique_numbers = unique_numbers - duplicates
+
+    print("Unique numbers:", unique_numbers)
+
+
+array = [1, 2, 2, 3, 4, 4, 5, 8, 6, 6]
+unique_numbers(array)
