@@ -1,0 +1,17 @@
+def Search(arr,n):
+    flag = 0    
+    target = int(input("Enter the no to be search: "))
+    
+    for i in range(n):
+        if (arr[i] == target):
+            flag = 1
+            break
+    if (flag == 1):
+        print(f"Your target index is: {i}")
+    else:
+        print(-1)        
+            
+#Driver code
+arr = [1,2,4,5,6]
+n = len(arr) 
+Search(arr,n) 
