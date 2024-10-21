@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int isPalindrome(int arr[], int n) 
+{
+    for (int i = 0; i < n / 2; i++) 
+    {
+        if (arr[i] != arr[n - 1 - i]) 
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main() 
+{
+    int arr[5];
+
+    printf("Enter 5 integers: ");
+    for (int i = 0; i < 5; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    if (isPalindrome(arr, 5)) 
+    {
+        printf("The Given array is  palindrome.");
+    } 
+    else 
+    {
+        printf("The Given array is not palindrome.");
+    }
+
+    return 0;
+}
